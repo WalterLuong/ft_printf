@@ -6,7 +6,7 @@
 /*   By: wluong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 04:27:37 by wluong            #+#    #+#             */
-/*   Updated: 2020/11/11 04:26:33 by wluong           ###   ########.fr       */
+/*   Updated: 2021/03/18 12:47:33 by wluong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
 int			ft_isdigit(int c);
-char		*ft_itoa(int n);
 void		*ft_memalloc(size_t size);
 void		ft_putchar(char c);
 int			ft_putwstr(char *s, int len);

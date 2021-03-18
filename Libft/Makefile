@@ -6,7 +6,7 @@
 #    By: wluong <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/07 09:43:12 by wluong            #+#    #+#              #
-#    Updated: 2020/11/12 01:11:10 by wluong           ###   ########.fr        #
+#    Updated: 2021/03/18 12:47:39 by wluong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ SRC		=	ft_bzero.c \
 	 		ft_strlen.c \
 	 		ft_isdigit.c \
 	 		ft_atoi.c \
-	 		ft_itoa.c \
 			ft_putchar.c \
 			ft_putstr.c \
 			ft_itoa_base.c \

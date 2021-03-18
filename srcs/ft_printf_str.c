@@ -6,11 +6,19 @@
 /*   By: wluong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 14:49:44 by wluong            #+#    #+#             */
-/*   Updated: 2020/11/12 04:57:42 by wluong           ###   ########.fr       */
+/*   Updated: 2021/03/18 12:45:58 by wluong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void	check_str_null(char *str, int len, t_struct *f)
+{
+	if (str == NULL)
+		f->compteur = f->compteur + ft_putwstr("(null)", len);
+	else
+		f->compteur = f->compteur + ft_putwstr(str, len);
+}
 
 void	str_minus(char *str, int len, t_struct *f)
 {
@@ -20,10 +28,7 @@ void	str_minus(char *str, int len, t_struct *f)
 			len = f->precision;
 	}
 	f->width = f->width - len;
-	if (str == NULL)
-		f->compteur = f->compteur + ft_putwstr("(null)", len);
-	else
-		f->compteur = f->compteur + ft_putwstr(str, len);
+	check_str_null(str, len, f);
 	ft_printf_width(f);
 }
 
@@ -41,10 +46,7 @@ void	str_zero(char *str, int len, t_struct *f)
 		f->compteur++;
 		f->width--;
 	}
-	if (str == NULL)
-		f->compteur = f->compteur + ft_putwstr("(null)", len);
-	else
-		f->compteur = f->compteur + ft_putwstr(str, len);
+	check_str_null(str, len, f);
 }
 
 void	str_nflag(char *str, int len, t_struct *f)
@@ -56,10 +58,7 @@ void	str_nflag(char *str, int len, t_struct *f)
 	}
 	f->width = f->width - len;
 	ft_printf_width(f);
-	if (str == NULL)
-		f->compteur = f->compteur + ft_putwstr("(null)", len);
-	else
-		f->compteur = f->compteur + ft_putwstr(str, len);
+	check_str_null(str, len, f);
 }
 
 void	ft_printf_str(va_list *args, t_struct *f)

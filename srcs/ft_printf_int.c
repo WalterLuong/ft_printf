@@ -6,7 +6,7 @@
 /*   By: wluong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 03:53:04 by wluong            #+#    #+#             */
-/*   Updated: 2020/11/12 05:47:33 by wluong           ###   ########.fr       */
+/*   Updated: 2021/03/18 12:41:22 by wluong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_printf_int(va_list *args, t_struct *f)
 	int		len;
 
 	nbr = va_arg(*args, int);
-	itoa = ft_itoa(nbr);
+	itoa = ft_itoa_base(nbr, "0123456789");
 	len = ft_strlen(itoa);
 	if (f->dot == 1 && f->precision > 0)
 		f->zero_width = f->precision - len;

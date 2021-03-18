@@ -6,7 +6,7 @@
 /*   By: wluong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 19:35:44 by wluong            #+#    #+#             */
-/*   Updated: 2020/11/12 00:24:52 by wluong           ###   ########.fr       */
+/*   Updated: 2021/03/18 12:45:53 by wluong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 typedef struct		s_struct
 {
-	char	type;
 	int		i;
 	int		compteur;
+	char	type;
 	int		minus;
 	int		zero;
 	int		zero_width;
